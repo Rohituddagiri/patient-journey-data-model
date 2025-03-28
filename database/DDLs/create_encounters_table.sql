@@ -1,0 +1,22 @@
+create table encounters(
+    encounterID VARCHAR,
+    start TIMESTAMP,
+    stop TIMESTAMP,
+    patientID VARCHAR,
+    organizationID VARCHAR,
+    providerID VARCHAR,
+    payerID VARCHAR,
+    encounterClass VARCHAR,
+    code INT,
+    description VARCHAR,
+    baseEncounterCost DECIMAL,
+    totalClaimCost DECIMAL,
+    payerCoverage DECIMAL,
+    reasonCode INT,
+    reasonDescription VARCHAR,
+    PRIMARY KEY(encounterID),
+    FOREIGN KEY (patientID) REFERENCES patients(patientID),
+    FOREIGN KEY (organizationID) REFERENCES organizations(organizationID),
+    FOREIGN KEY (providerID) REFERENCES providers(providerID),
+    FOREIGN KEY (payerID) REFERENCES payers(payerID)
+);

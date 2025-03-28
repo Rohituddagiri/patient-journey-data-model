@@ -1,0 +1,21 @@
+create table payers(
+	payerID VARCHAR,
+	name VARCHAR,
+	ownership VARCHAR,
+	address VARCHAR,
+	city VARCHAR,
+	stateHeadquartered VARCHAR,
+	zip INT,
+	phone INT,
+	amountCovered DECIMAL,
+	amountUnCovered DECIMAL,
+	revenue DECIMAL,
+	coveredEncounters INT,
+	uncoveredEncounters INT,
+	coveredMedications INT,
+	uncoveredMedications INT,
+	uniqueCustomers INT,
+	qlosAvg DECIMAL,
+	memberMonths INT,
+	PRIMARY KEY(payerID)
+);
